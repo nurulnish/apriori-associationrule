@@ -288,7 +288,7 @@ def display_rules(rules, frequent_items, write=False):
 				f.write(str([reverse_map[x] for x in itemset]).strip(bad_chars).replace("'", '')+' ('+str(support)+')'+'\n')
 #ubah nama file yang di up			
 if __name__=='__main__':
-	data_path = 'data/groceries.csv'
+	data_path = 'data/alldata.csv'
 	frequent_items = frequent_itemset_generation(data_path)
 	rules = generate_rules(frequent_items)
 	display_rules(rules, frequent_items, write=True)
